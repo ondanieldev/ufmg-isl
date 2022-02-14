@@ -97,7 +97,7 @@
 
 ### Time diagram analysis
 
-<img src="./otp_cypher/time_diagram.png" height="100px" width="1000px" />
+<img src="./otp_enc_dec/time_diagram.png" height="100px" width="1000px" />
 
 - Clock pulses.
 - `s0` goes `1` four times: two times to load the key seed to encode/decode the first message; and two times to do the same for the second message.
