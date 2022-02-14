@@ -1,3 +1,10 @@
+# Introduction
+
+- This repository contains three folders. Inside each one, has a project containing a design file, a testbench file and a time diagram screenshot. These projects are:
+  - Behavioural D Flip Flop;
+  - Structural D Flip Flop;
+  - OTP Encoder/Decoder.
+
 # D Flip Flop
 
 ## General
