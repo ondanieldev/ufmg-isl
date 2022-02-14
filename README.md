@@ -113,9 +113,9 @@
 # Running
 
 - There are 3 programs, one in each folder. To run any of them, do these following steps: 
-  - Copy/paste `design.sv` and `testbench.sv` on [EDA playground](https://www.edaplayground.com/);
-  - Select `Icarus Verilog 0.9.7` on Tools & Simulators;
-  - Check `Open EPWave after run` if you want to see the time diagram;
+  - Copy/paste `design.sv` and `testbench.sv` on [EDA playground](https://www.edaplayground.com/).
+  - Select `Icarus Verilog 0.9.7` on Tools & Simulators.
+  - Check `Open EPWave after run` if you want to see the time diagram.
   - Check out the `Log` tab to see encoded and decode messages.
 
 # Credits
