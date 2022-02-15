@@ -1,8 +1,8 @@
 # Heading
 
-Name: Daniel Oliveira Nascimento
-Number: 2020054293
-Email: [on-daniel@ufmg.br](mailto=on-daniel@ufmg.br)
+- Name: Daniel Oliveira Nascimento
+- Number: 2020054293
+- Email: [on-daniel@ufmg.br](mailto:on-daniel@ufmg.br)
 
 # Introduction
 
