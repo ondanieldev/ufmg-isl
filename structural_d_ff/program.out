@@ -1,0 +1,60 @@
+#! /usr/share/iverilog-0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_6)";
+:vpi_time_precision - 10;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x153b850 .scope module, "d_flip_flop_tb" "d_flip_flop_tb" 2 3;
+ .timescale -9 -10;
+v0x154c530_0 .var "clk_tb", 0 0;
+v0x154c5d0_0 .var "d_tb", 0 0;
+v0x154c680_0 .net "q_tb", 0 0, L_0x154ca50; 1 drivers
+v0x154c730_0 .net "qbar_tb", 0 0, L_0x154cba0; 1 drivers
+S_0x153b940 .scope module, "dff" "d_flip_flop" 2 8, 3 1, S_0x153b850;
+ .timescale 0 0;
+L_0x154c810 .functor NOT 1, v0x154c5d0_0, C4<0>, C4<0>, C4<0>;
+L_0x154c8f0 .functor AND 1, L_0x154c810, v0x154c530_0, C4<1>, C4<1>;
+L_0x154c9f0 .functor AND 1, v0x154c5d0_0, v0x154c530_0, C4<1>, C4<1>;
+L_0x154ca50 .functor NOR 1, L_0x154c8f0, L_0x154cba0, C4<0>, C4<0>;
+L_0x154cba0 .functor NOR 1, L_0x154c9f0, L_0x154ca50, C4<0>, C4<0>;
+v0x1518e80_0 .net "clk", 0 0, v0x154c530_0; 1 drivers
+v0x154c120_0 .net "d", 0 0, v0x154c5d0_0; 1 drivers
+v0x154c1c0_0 .net "dbar", 0 0, L_0x154c810; 1 drivers
+v0x154c260_0 .alias "q", 0 0, v0x154c680_0;
+v0x154c310_0 .alias "qbar", 0 0, v0x154c730_0;
+v0x154c3b0_0 .net "t1", 0 0, L_0x154c8f0; 1 drivers
+v0x154c490_0 .net "t2", 0 0, L_0x154c9f0; 1 drivers
+    .scope S_0x153b850;
+T_0 ;
+    %set/v v0x154c530_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x153b850;
+T_1 ;
+    %delay 100, 0;
+    %load/v 8, v0x154c530_0, 1;
+    %inv 8, 1;
+    %set/v v0x154c530_0, 8, 1;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x153b850;
+T_2 ;
+    %vpi_call 2 20 "$dumpfile", "dump.vcd";
+    %vpi_call 2 21 "$dumpvars";
+    %set/v v0x154c5d0_0, 0, 1;
+    %delay 1000, 0;
+    %set/v v0x154c5d0_0, 1, 1;
+    %delay 1000, 0;
+    %set/v v0x154c5d0_0, 0, 1;
+    %delay 1000, 0;
+    %set/v v0x154c5d0_0, 1, 1;
+    %delay 1000, 0;
+    %vpi_call 2 35 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "design.sv";
