@@ -1,3 +1,9 @@
+# Heading
+
+Name: Daniel Oliveira Nascimento
+Number: 2020054293
+Email: [on-daniel@ufmg.br](mailto=on-daniel@ufmg.br)
+
 # Introduction
 
 - This repository contains three folders. Inside each one, there is a project containing a design file, a testbench file and a time diagram screenshot. These projects are:
@@ -38,6 +44,7 @@
 ### Introduction
 
 - An 8 bit LFSR was chosen because it has a small period, so it's easy to check if it's working correctly and it's quick to simulate.
+- LFSR polynomial function is `x8 + x7 + 1` or `x1 + x2 + 1`, depending on the shifting direction.
 - It was developed using the behavioral way as it is much simpler than the structural.
 - Despite being an 8 bit LFSR, the code can be easily changed to another bit size as it was developed using local params.
 - The strategy to combine its data is doing a xor between the two least significant bits when shifting right, or between the two most significant bits when shifting left.
